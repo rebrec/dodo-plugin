@@ -82,15 +82,15 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./plugins-src/dodo-plugin/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./plugins-src/hurry-dodo-plugin/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./plugins-src/dodo-plugin/datasource.definition.js":
-/*!**********************************************************!*\
-  !*** ./plugins-src/dodo-plugin/datasource.definition.js ***!
-  \**********************************************************/
+/***/ "./plugins-src/hurry-dodo-plugin/datasource.definition.js":
+/*!****************************************************************!*\
+  !*** ./plugins-src/hurry-dodo-plugin/datasource.definition.js ***!
+  \****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -121,10 +121,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./plugins-src/dodo-plugin/index.js":
-/*!******************************************!*\
-  !*** ./plugins-src/dodo-plugin/index.js ***!
-  \******************************************/
+/***/ "./plugins-src/hurry-dodo-plugin/index.js":
+/*!************************************************!*\
+  !*** ./plugins-src/hurry-dodo-plugin/index.js ***!
+  \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -132,7 +132,7 @@ module.exports = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return DodoPlugin; });
 /* harmony import */ var _src_core_Plugin__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../src/core/Plugin */ "./src/core/Plugin.js");
-/* harmony import */ var _datasource_definition__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./datasource.definition */ "./plugins-src/dodo-plugin/datasource.definition.js");
+/* harmony import */ var _datasource_definition__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./datasource.definition */ "./plugins-src/hurry-dodo-plugin/datasource.definition.js");
 /* harmony import */ var _datasource_definition__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_datasource_definition__WEBPACK_IMPORTED_MODULE_1__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 

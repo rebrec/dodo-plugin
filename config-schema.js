@@ -1,5 +1,5 @@
 module.exports = {
-    searchDodo: {
+    "dodo-plugin": {
         title: "Search Dodo Plugin",
         type: "object",
         properties: {
