@@ -9,7 +9,7 @@ module.exports = {
     columns: [  
         { columnName: 'Hostname', property: 'computername', variableName: 'hostname' },
         { columnName: 'Username', property: 'username', variableName: 'username' },
-        { columnName: 'Ip', property: 'ipaddresses', variableName: 'ipaddresses' },
+        { columnName: 'Ip', property: 'ipaddress', variableName: 'ipaddress' },
     ],
     pingableProperty: 'ipaddresses',
     mainColumnProperty: 'computername',

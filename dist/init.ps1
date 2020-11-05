@@ -5,9 +5,17 @@ function Search-Dodo {
         $filter
     )
     $hosts = Get-DodoHosts -scriptname host-status -scriptversion "1.0" | Select lastCheckTimestamp -ExpandProperty additionnalData | select -Property * -ExcludeProperty logs
+    $hosts = $hosts | % {
+        $h = $_
+        $ips = $h.ipaddresses -split ','
+        $ips | % {
+            $tmp = $h.PSObject.Copy()
+            Add-Member -InputObject $tmp  -MemberType NoteProperty -Name ipaddress -Value $_
+            $tmp
+        }
+    }
     return $hosts | ? { $_.computername -like "*$filter*" -or $_.username -like "*$filter*" }
 }
-
 
 Function Get-DodoHosts {
     [cmdletbinding()]
@@ -34,12 +42,16 @@ Function Get-DodoHosts {
                 $value = ($clientObj.additionnalData | Select -ExpandProperty $property)
                 Add-Member -InputObject $clientObj -MemberType NoteProperty -Name $property -Value $value
             }
+            $clientObj.ipaddresses = $clientObj.ipaddresses -split ','
+
+            
             $clientObj
         }
 
         return $res
     }
     Catch {
+        write-warning $Error[0]
         return @()
     }
 }
